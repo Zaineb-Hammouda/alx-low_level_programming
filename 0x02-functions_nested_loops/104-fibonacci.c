@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-unsigned long i = 0, j = 1, seq;
+unsigned long int i = 0, j = 1, seq;
 int count;
 
 	for (count = 0; count < 98; count++)
