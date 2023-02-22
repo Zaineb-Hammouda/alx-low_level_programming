@@ -27,7 +27,7 @@ int i, j, k = 98;
 	{
 		_putchar(k);
 	}
-	for (i != k || j != k)
+	while (i != k || j != k)
 	{
 		_putchar(i + ',' + ' ');
 		_putchar(j + ',' + ' ');
