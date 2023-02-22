@@ -1,5 +1,6 @@
 /**
  * _putchar - writes the character c to stdout
+ * prints alphabet in lowercase
  */
 
 #ifndef main_h

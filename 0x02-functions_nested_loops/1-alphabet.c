@@ -14,15 +14,3 @@ int lower;
 	if (lower == 'z')
 		_putchar('\n');
 }
-
-/**
- * main - Entry point
- *
- * description : executes code
- * Return: Always 0 (success)
- */
-int main(void)
-{
-	print_alphabet();
-return (0);
-}
