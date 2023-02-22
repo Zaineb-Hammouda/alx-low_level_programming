@@ -13,23 +13,23 @@ int i, j, k = 98;
 	{
 		for (i = n; i <= k; i++)
 		{
-			_putchar(i);
+			_putchar('i');
 		}
 	}
 	else if (n > k)
 	{
 		for (j = n; j >= k; j++)
 		{
-			_putchar(j);
+			_putchar('j');
 		}
 	}
 	else
 	{
-		_putchar(k);
+		_putchar('k');
 	}
 	while (i != k || j != k)
 	{
-		_putchar(i + ',' + ' ');
-		_putchar(j + ',' + ' ');
+		_putchar('i' + ',' + ' ');
+		_putchar('j' + ',' + ' ');
 	}
 }
