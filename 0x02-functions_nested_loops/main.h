@@ -7,6 +7,10 @@
  * print_sign - prints sign of num
  * _abs - computes absolute value of int
  * print_last_digit - prints the last digit of a number
+ * jack_bauer - prints every minute of the day
+ * times_table - prints the 9 times table starting with 0
+ * add - adds two integers and returns the result
+ * print_to_98 - print all natural numbers from n to 98
  */
 
 #ifndef main_h
@@ -19,4 +23,9 @@ extern int _isalpha(int c);
 extern int print_sign(int n);
 extern int _abs(int);
 extern int print_last_digit(int);
+extern void jack_bauer(void);
+extern void times_table(void);
+extern int add(int, int);
+extern void print_to_98(int n);
+
 #endif
