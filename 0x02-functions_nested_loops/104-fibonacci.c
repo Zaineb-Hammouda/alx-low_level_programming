@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-unsigned long long int i = 0, j = 1, seq;
+unsigned long i = 0, j = 1, seq;
 int count;
 
 	for (count = 0; count < 98; count++)
@@ -17,7 +17,7 @@ int count;
 		seq = i + j;
 		i = j;
 		j = seq;
-		printf("%llu", seq);
+		printf("%lu", seq);
 		if (count < 97)
 		{
 			printf(", ");
