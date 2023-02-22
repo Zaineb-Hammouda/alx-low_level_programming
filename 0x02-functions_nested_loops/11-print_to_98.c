@@ -7,29 +7,29 @@
  */
 void print_to_98(int n)
 {
-int i, j, k = 98;
+int i, j;
 
-	if (n < k)
+	if (n < 98)
 	{
-		for (i = n; i <= k; i++)
+		for (i = n; i <= 98; i++)
 		{
-			_putchar('i');
+			_putchar(i);
 		}
 	}
-	else if (n > k)
+	else if (n > 98)
 	{
-		for (j = n; j >= k; j++)
+		for (j = n; j >= 98; j++)
 		{
-			_putchar('j');
+			_putchar(j);
 		}
 	}
 	else
 	{
-		_putchar('k');
+		_putchar(98);
 	}
-	while (i != k || j != k)
+	while (i != 98 || j != 98)
 	{
-		_putchar('i' + ',' + ' ');
-		_putchar('j' + ',' + ' ');
+		_putchar(i + ',' + ' ');
+		_putchar(j + ',' + ' ');
 	}
 }
