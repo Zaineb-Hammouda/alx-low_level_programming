@@ -3,11 +3,10 @@
 /**
  * _abs - computes absolute value of integer
  * Return: 0
- * @int: int is the number to make absolute (parameter)
+ * @i: i is the number to make absolute (parameter)
  */
-int _abs(int)
+int _abs(int i)
 {
-int i;
-	i = +i
+	i = +i;
 	return ('i');
 }
