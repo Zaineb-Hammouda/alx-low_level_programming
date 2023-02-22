@@ -7,6 +7,12 @@
  */
 int _abs(int i)
 {
-	i = +i;
-	return ('i');
+int abs;
+
+	if (i < 0)
+	{
+		i = +i;
+	}
+	abs = i;
+	return (abs);
 }
