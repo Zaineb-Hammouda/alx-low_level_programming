@@ -11,7 +11,7 @@ int abs;
 
 	if (i < 0)
 	{
-		i = +i;
+		i = i * (-1);
 	}
 	abs = i;
 	return (abs);
