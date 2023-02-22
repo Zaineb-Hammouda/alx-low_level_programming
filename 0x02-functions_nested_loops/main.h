@@ -5,6 +5,7 @@
  * _islower - checks for lowercase char
  * _isalpha - checks for alphabetic char
  * print_sign - prints sign of num
+ * _abs - computes absolute value of int
  */
 
 #ifndef main_h
@@ -15,4 +16,5 @@ extern void print_alphabet_x10(void);
 extern int _islower(int c);
 extern int _isalpha(int c);
 extern int print_sign(int n);
+extern int _abs(int);
 #endif
