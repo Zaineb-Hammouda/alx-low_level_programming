@@ -9,14 +9,15 @@
  */
 int main(void)
 {
-unsigned int i = 0, j = 1, count, seq;
+unsigned long long int i = 0, j = 1, seq;
+int count;
 
 	for (count = 0; count < 98; count++)
 	{
 		seq = i + j;
 		i = j;
 		j = seq;
-		printf("%u", seq);
+		printf("%llu", seq);
 		if (count < 97)
 		{
 			printf(", ");
