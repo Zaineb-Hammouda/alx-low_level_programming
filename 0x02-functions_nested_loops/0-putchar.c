@@ -10,7 +10,7 @@ int main(void)
 char put[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 int i = 0;
 
-	for (int i = 0; i < 8; i++)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(put[i]);
 		if (put[i] == 'r')
