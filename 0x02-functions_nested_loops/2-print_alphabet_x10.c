@@ -13,8 +13,10 @@ int i = 0;
 	while (lower <= 'z')
 	{
 		while (i <= 10)
+		{
 			_putchar(lower);
 			lower++;
+		}
 	}
 		i++;
 		_putchar('\n');
