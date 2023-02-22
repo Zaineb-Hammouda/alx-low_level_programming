@@ -2,8 +2,10 @@
 
 /**
  * main - Entry point
+ *
  * description : prints _putchar followed by new line
- * return: always 0 (success)
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
