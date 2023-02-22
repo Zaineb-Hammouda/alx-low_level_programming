@@ -18,7 +18,7 @@ int i, j;
 	}
 	else if (n > 98)
 	{
-		for (j = n; j >= 98; j++)
+		for (j = n; j >= 98; j--)
 		{
 			_putchar(j);
 		}
@@ -32,4 +32,5 @@ int i, j;
 		_putchar(i + ',' + ' ');
 		_putchar(j + ',' + ' ');
 	}
+	_putchar('\n');
 }
