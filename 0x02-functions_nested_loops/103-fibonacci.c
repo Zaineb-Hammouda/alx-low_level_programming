@@ -13,8 +13,7 @@ unsigned long i = 0, j = 1, seq;
 unsigned int sum;
 int count = 0;
 
-	do
-	{
+	do {
 		seq = i + j;
 		i = j;
 		j = seq;
@@ -23,8 +22,7 @@ int count = 0;
 		{
 			sum += seq;
 		}
-	}
-	while (seq < 4000000);
+	} while (seq < 4000000);
 	printf("%u", sum);
 	printf("\n");
 	return (0);
