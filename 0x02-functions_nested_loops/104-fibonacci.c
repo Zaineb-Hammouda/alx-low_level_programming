@@ -12,13 +12,13 @@ int main(void)
 unsigned long i = 0, j = 1, seq;
 int count;
 
-	for (count = 0; count < 98; count++)
+	for (count = 0; count < 97; count++)
 	{
 		seq = i + j;
 		i = j;
 		j = seq;
 		printf("%ld", seq);
-		if (count < 97)
+		if (count < 96)
 		{
 			printf(", ");
 		}
