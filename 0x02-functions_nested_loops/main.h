@@ -11,6 +11,7 @@
  * times_table - prints the 9 times table starting with 0
  * add - adds two integers and returns the result
  * print_to_98 - print all natural numbers from n to 98
+ * print_times_table - prints n times table
  */
 
 #ifndef main_h
@@ -27,5 +28,5 @@ extern void jack_bauer(void);
 extern void times_table(void);
 extern int add(int, int);
 extern void print_to_98(int n);
-
+extern void print_times_table(int n);
 #endif
