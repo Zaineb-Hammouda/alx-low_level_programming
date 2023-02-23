@@ -8,7 +8,7 @@
  */
 void print_to_98(int n)
 {
-int i, j;
+int i, j, m;
 
 	if (n < 98)
 	{
@@ -26,7 +26,7 @@ int i, j;
 	}
 	else
 	{
-		printf(98);
+		printf("%d", m);
 	}
 	while (i != 98 || j != 98)
 	{
