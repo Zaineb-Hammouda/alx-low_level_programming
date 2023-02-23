@@ -9,10 +9,11 @@
  */
 int main(void)
 {
-unsigned long i = 0, j = 1, seq, sum;
-int count;
+unsigned long i = 0, j = 1, seq;
+unsigned int sum;
+int count = 0;
 
-	while (seq < 40000000)
+	do
 	{
 		seq = i + j;
 		i = j;
@@ -21,9 +22,10 @@ int count;
 		if (seq % 2 == 0)
 		{
 			sum += seq;
-			printf("%lu", sum);
 		}
 	}
+	while (seq < 4000000);
+	printf("%u", sum);
 	printf("\n");
 	return (0);
 }
