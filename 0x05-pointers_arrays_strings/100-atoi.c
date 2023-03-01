@@ -20,13 +20,14 @@ int _atoi(char *s)
 		{
 			if (s[i + 1] >= '0' && s[i + 1] <= '9')
 			{
-				_putchar(s[i]);
+				return (s[i]);
 			}
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			_putchar(s[i]);
+			return (s[i]);
 		}
+		else
+			return (0);
 	}
-	return (0);
 }
