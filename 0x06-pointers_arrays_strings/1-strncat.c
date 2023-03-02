@@ -5,7 +5,7 @@
  * Return: pointer to resulting string
  * @dest: string to be appended upon
  * @src: second string to be appended to the first
- * @n: number of bytes from src 
+ * @n: number of bytes from src
  */
 char *_strncat(char *dest, char *src, int n)
 {
