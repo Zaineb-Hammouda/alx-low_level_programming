@@ -14,6 +14,7 @@ char print_number(int n)
 		_putchar('-');
 		number = -number;
 	}
+
 	if ((number / 10) > 0)
 		print_number(number / 10);
 
