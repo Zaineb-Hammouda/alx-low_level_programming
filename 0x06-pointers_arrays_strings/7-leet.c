@@ -8,11 +8,11 @@
 char *leet(char *str)
 {
 	int i = 0, j;
-	char s[8] = {'0', 'L', '?', 'E', 'A', '?', 'T'};
+	char s[8] = {'0', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
 	while (str[i])
 	{
-		for (j = 0; j <= 7; j++)
+		for (j = 0; j < 8; j++)
 		{
 			if (str[i] == s[j] || str[i] - 32 == s[j])
 				str[i] = j + '0';
