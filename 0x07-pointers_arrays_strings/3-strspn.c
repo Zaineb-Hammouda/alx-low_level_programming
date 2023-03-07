@@ -9,22 +9,20 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int bytes = 0;
-	int i;
+	int n = 0, i, j;
 
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; accept[i]; i++)
+		if (s[i] != 32)
 		{
-			if (*s == accept[i])
+			for (j = 0; accept[j] != '\0'; j++)
 			{
-				bytes++;
-				break;
+				if (s[i] == accept[j])
+					n++;
 			}
-			else if (accept[i + 1] == '\0')
-				return (bytes);
 		}
-		s++;
+		else
+			return (n);
 	}
 	return (n);
 }
