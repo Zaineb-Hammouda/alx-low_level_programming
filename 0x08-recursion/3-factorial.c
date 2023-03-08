@@ -23,4 +23,5 @@ int factorial(int n)
 		fac = n * factorial(n - 1);
 		return (fac);
 	}
+	return (0);
 }
