@@ -18,10 +18,6 @@ int factorial(int n)
 		return (1);
 	}
 
-	while (n > 0)
-	{
-		fac = n * factorial(n - 1);
-		return (fac);
-	}
-	return (0);
+	fac = n * factorial(n - 1);
+	return (fac);
 }
