@@ -7,8 +7,8 @@
  * @argv: array of words written when prog is run (arguments)
  * @argc: number of arguments
  */
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char **argv)
 {
-	printf("%s", argv[0]);
+	printf("%s\n", *argv);
 	return (0);
 }

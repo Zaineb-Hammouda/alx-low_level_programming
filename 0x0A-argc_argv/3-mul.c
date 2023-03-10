@@ -2,16 +2,18 @@
 #include <stdio.h>
 
 /**
- * main - prints all arguments it recieves, one per line
- * Return: 0 always success
+ * main - multiplies two numbers
+ * Return: 0 if success, 1 if less than two arguments
  * @argv: array of words written when prog is run (arguments)
  * @argc: number of arguments
  */
 int main(int argc, char *argv[])
 {
-	for (int i = 0; i < argc; i++)
+	if (argc < 3)
 	{
-		printf("%s\n", argv[i]);
+		printf("Error\n");
+		return (1);
 	}
+	printf("%i\n", argv[1] * argv[2]);
 	return (0);
 }
