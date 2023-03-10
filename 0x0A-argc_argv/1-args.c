@@ -7,7 +7,7 @@
  * @argv: array of words written when prog is run (arguments)
  * @argc: number of arguments
  */
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
 	printf("%i", argc - 1);
 	putchar('\n');
