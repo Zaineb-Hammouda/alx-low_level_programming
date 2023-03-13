@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money.
+ * main - prints the minimum number of coins
+ * to make change for an amount of money.
  * Return: 1 if argc < 2
  * @argv: array of words written when prog is run (arguments)
  * @argc: number of arguments
@@ -43,5 +44,5 @@ int main(int argc, char **argv)
 	}
 	printf("%d\n", i);
 
-	return 0;
+	return (0);
 }
