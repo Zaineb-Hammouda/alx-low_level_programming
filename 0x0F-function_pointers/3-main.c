@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * main - entry point 
+ * main - entry point
  * Return: 0 if success
  * @argc: number of arguments
  * @argv: array of args
