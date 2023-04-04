@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /**
- * free_listint - frees a listint_t list
+ * free_listint2 - frees a listint_t list and sets head to NULL
  * @head: first node in list
  * Return: nothing
  */
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	listint_t *traverse = head;
+	listint_t *temporary;
 
-	while (traverse)
+	while (*head)
 	{
-		free(traverse);
-		traverse = traverse->next;
+		temporary = *head;
+		*head = temporary->next;
+		free(temporary);
 	}
-	head = NULL;
+	*head = NULL;
 }
