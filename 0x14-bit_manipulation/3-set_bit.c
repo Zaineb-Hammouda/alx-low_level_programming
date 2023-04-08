@@ -57,7 +57,7 @@ char *convert_binary(unsigned long int num)
 	return (str);
 }
 /**
- * binary_to_uint - converts a binary number to an unsigned int
+ * binary_to_int - converts a binary number to an unsigned int
  * @b: pointer to string of binary
  * Return: the unsigned int
  * or 0 if there is other chars or if b is null
@@ -67,7 +67,7 @@ unsigned long int binary_to_int(const char *b)
 	unsigned long int result = 0, pow = 1;
 	int i;
 
-	if (b == NULL)				
+	if (b == NULL)
 		return (0);
 
 	for (i = strlen(b) - 1; i >= 0; i--)
@@ -92,7 +92,7 @@ char *strrev(char *str)
 	int i, j = 0;
 	char ch;
 
-	if (!str || ! *str)
+	if (!str || !*str)
 		return (str);
 
 	i = strlen(str) - 1;
@@ -123,6 +123,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	b[index] = '1';
 	strrev(b);
 	*n = binary_to_int(b);
-	
+
 	return (1);
 }
