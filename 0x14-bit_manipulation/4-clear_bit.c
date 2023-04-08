@@ -123,6 +123,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	b[index] = '0';
 	strrev(b);
 	*n = binary_to_int(b);
-	
+	free(b);
 	return (1);
 }
