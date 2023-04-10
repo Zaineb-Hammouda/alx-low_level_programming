@@ -2,12 +2,14 @@
 
 /**
  * get_bit - returns the value of a bit at a given index
- * Return: 1 or 0 depends on the bit at index
+ * Return: 1 or 0 depends on the bit at index or -1 if index > 63
  * @n: number to search in
  * @index: index of bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	if (index > 63)
+		return (-1);
 	return ((n & (1 << index)) != 0);
 	/**
 	 * 1 << index = shifts 1 to the index position
