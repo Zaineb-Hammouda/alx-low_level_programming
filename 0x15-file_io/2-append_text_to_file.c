@@ -27,6 +27,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		len = strlen(text_content);
 		num_w = write(fd, text_content, len);
+		if (num_w == -1)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 
 	if (len != num_w || close(fd) == -1)
