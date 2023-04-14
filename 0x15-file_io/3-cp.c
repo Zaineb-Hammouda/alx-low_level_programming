@@ -1,8 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 #include <unistd.h>
 #include <fcntl.h>
-#include <string.h>
+#include <errno.h>
+#include <stdlib.h>
+/**
+ * close_f - checks for closing errors
+ * @fd: file descriptor to close
+ * Return: 100 if there's an error and 0 if successfully closed
+ */
+int close_f(int fd)
+{
+	int n;
 
+	n = close(fd);
+	if (n == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		return (100);
+	}
+	return (0);
+}
 /**
  * main - copies the content of a file to another file
  * Return: always 0
@@ -11,7 +28,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fd_r, fd_w, num_r, num_w, len;
+	int fd_r, fd_w, num_r, num_w;
 	char *buffer[1024];
 
 	if (argc != 3)
@@ -26,24 +43,25 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd_r = open(argv[2], O_WRONLY | O_CREAT | O_EXCL, 0664);
-	if (fd_r == -1)
+	fd_w = open(argv[2], O_WRONLY | O_CREAT | O_EXCL, 0664);
+	if (fd_w == -1)
+	{
+		if (errno == EEXIST)
+			fd_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC);
+		else
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+	while ((num_r = read(fd_r, buffer, 1024)) > 0)
+		num_w = write(fd_w, buffer, 1024);
+	if (num_w != num_r)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
-	while (num_r = read(fd_r, buffer, 1024) > 0)
-		write(fd_w, buffer, 1024);
-	if (close(fd_r) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", fd_r);
-		exit(100);
-	}
-	else if (close(fd_w) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", fd_w);
-		exit(100);
-	}
+	close_f(fd_r);
+	close_f(fd_w);
 	return (0);
 }
