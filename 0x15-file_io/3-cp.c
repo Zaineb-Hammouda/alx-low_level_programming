@@ -47,10 +47,11 @@ int main(int argc, char **argv)
 	if (fd_w == -1)
 	{
 		if (errno == EEXIST)
-			fd_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC);
+			fd_w = open(argv[2], O_WRONLY | O_TRUNC);
 		else
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			close_f(fd_r);
 			exit(99);
 		}
 	}
@@ -59,14 +60,16 @@ int main(int argc, char **argv)
 		if (num_r == -1)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			close_f(fd_r);
+			close_f(fd_w);
 			exit(98);
 		}
-		num_w = write(fd_w, buffer, 1024);
-	}
-	if (num_w != num_r)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		num_w = write(fd_w, buffer, num_r);
+		if (num_w == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 	close_f(fd_r);
 	close_f(fd_w);
