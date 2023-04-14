@@ -55,7 +55,14 @@ int main(int argc, char **argv)
 		}
 	}
 	while ((num_r = read(fd_r, buffer, 1024)) > 0)
+	{
+		if (num_r == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		num_w = write(fd_w, buffer, 1024);
+	}
 	if (num_w != num_r)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
