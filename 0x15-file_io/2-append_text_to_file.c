@@ -19,8 +19,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_APPEND | O_EXCL);
 	if (fd == -1)
 	{
-		if (errno == EEXIST)
-			return (1);
 		return (-1);
 	}
 	if (text_content != NULL)
@@ -33,8 +31,5 @@ int append_text_to_file(const char *filename, char *text_content)
 			return (-1);
 		}
 	}
-
-	if (len != num_w || close(fd) == -1)
-		return (-1);
 	return (1);
 }
