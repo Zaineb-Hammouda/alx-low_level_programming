@@ -8,7 +8,7 @@ void exit_error(char **argv, int n)
 {
 	if (n == 0)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	else if (n == 1)
