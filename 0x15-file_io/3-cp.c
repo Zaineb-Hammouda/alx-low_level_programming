@@ -32,7 +32,7 @@ int close_file(int fd)
 	if (close(fd) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
-		return (100);
+		exit(100);
 	}
 	return (0);
 }
