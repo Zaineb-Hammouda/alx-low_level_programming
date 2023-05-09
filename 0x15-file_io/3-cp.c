@@ -68,9 +68,10 @@ int main(int argc, char **argv)
 	{
 		if (num_r == -1)
 		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			close_file(fd_r);
 			close_file(fd_w);
-			exit_error(argv, 1);
+			exit(98);
 		}
 		num_w = write(fd_w, buffer, num_r);
 		if (num_w == -1)
